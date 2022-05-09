@@ -19,7 +19,7 @@ variable "private_subnet_count" {
 }
 
 variable "vpc_cidr" {
-  type = string
-  default = "10.0.0.0/16"
+  type        = string
+  default     = "10.0.0.0/16"
   description = "Main VPC CIDR block"
 }
