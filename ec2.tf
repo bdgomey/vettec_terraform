@@ -3,7 +3,7 @@ resource "aws_instance" "main" {
   instance_type          = "t2.micro"
   key_name               = "terraform_key"
   subnet_id              = aws_subnet.public[0].id
-  vpc_security_group_ids = ["sg-04159d0dd98acada2"]
+  vpc_security_group_ids = ["aws_security_group.main.id"]
   tags = {
     "Name" = "${var.default_tags.env}-ec2"
   }
